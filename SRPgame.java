@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class SRPgame {
 
 	public static void main(String[] args) {
-		System.out.println("Hey, let's play Rock, Paper, Scissors!");
+		while(true){
+		System.out.println("Hey, let's play Rock, Paper, Scissors! ");
+		System.out.println("Enter quit will stop the game. ");
 		Scanner scan = new Scanner(System.in);
 		Random num = new Random();
 		String Computerplay =" ";
@@ -24,9 +26,10 @@ public class SRPgame {
 		
 		System.out.println("Enter your choice");
 		
-		player = scan.nextLine();
+		player = scan.next();
 		player = player.toLowerCase();
 		
+		if ((player.equals("scissors")) || (player.equals("paper")) || (player.equals("rock"))){
 		
 		if(player.equals(Computerplay)){
 			System.out.println("Tie");
@@ -60,8 +63,19 @@ public class SRPgame {
 		}
 		
 		System.out.println("Computer choice is "+Computerplay);
+		System.out.println();
 		
+		
+		}else if (player.equals("quit")){
+			break;
+			
+		}
+		else {
+			System.out.println("You should have vaild input");
+			System.out.println();
+			
+		}
 		
 	}
-
+	}
 }
